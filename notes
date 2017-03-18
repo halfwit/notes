@@ -2,7 +2,7 @@
 # Front end for searching and writing notes
 # Done with as simple userland tools as possible
 
-notedir=$XDG_CACHE_HOME/notes
+notedir=$XDG_DATA_HOME/notes
 # Scrub empty files
 load() {
 	cd $notedir || exit 1

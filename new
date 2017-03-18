@@ -1,6 +1,6 @@
 #!/bin/sh
 
-notesdir="$XDG_CACHE_HOME/notes"
+notesdir="$XDG_DATA_HOME/notes"
 
 result() {
 	echo "" | dmenu -p "$1"
