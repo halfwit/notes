@@ -22,6 +22,7 @@ result=`load | dmenu -p "Create/edit note:"`
 
 test -z $result && exit 0
 case $result in
-	New) exec $XDG_DATA_HOME/notes/new ;;
-	*)   exec st -e edit "$notedir/$result" ;;
+	New) test -z $NEW_NOTE && exec "$NEW_NOTE"
+		exec /usr/local/share/notes/new ;;
+	*)  exec $TERMINAL -e edit "$notedir/$result" ;;
 esac
