@@ -22,7 +22,7 @@ result=`load | dmenu -p "Create/edit note:"`
 
 test -z $result && exit 0
 case $result in
-	New) test -z $NEW_NOTE && exec "$NEW_NOTE"
+	New) test -z $NEW_NOTE || exec "$NEW_NOTE"
 		exec /usr/local/share/notes/new ;;
 	*)  exec $TERMINAL -e edit "$notedir/$result" ;;
 esac
