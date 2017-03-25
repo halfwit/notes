@@ -5,7 +5,7 @@ PREFIX ?= /usr/local
 
 install:
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
-	@cp -f notes ${DESTDIR}${PREFIX}/bin
+	@sed "s|/usr/local|${DESTDIR}${PREFIX}|" notes > ${DESTDIR}${PREFIX}/bin/notes
 	@chmod 755 ${DESTDIR}${PREFIX}/bin/notes
 	@mkdir -p ${DESTDIR}${PREFIX}/share/notes
 	@cp -f new ${DESTDIR}${PREFIX}/share/notes/new
