@@ -3,7 +3,7 @@
 notesdir="$XDG_DATA_HOME/notes"
 
 result() {
-	echo "" | dmenu -p "$1"
+	echo -n | dmenu -p "$1"
 }
 
 note() {
